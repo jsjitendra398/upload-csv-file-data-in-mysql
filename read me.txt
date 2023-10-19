@@ -1,0 +1,14 @@
+Open MYSQL Command Line
+
+Type in your password
+
+Enter the following:
+
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+
+If local_infile value is equal to false set it to true by:
+
+SET GLOBAL local_infile = true;
+
+
+and change in       my.cnf

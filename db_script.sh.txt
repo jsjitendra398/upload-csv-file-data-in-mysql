@@ -1,0 +1,26 @@
+#!/bin/bash
+#this script work for database query
+
+#read -p "username:" db_user_var  
+#echo "Database username is: " $db_user_var
+#read -sp "Password:" db_pass_var
+#echo " 
+"
+#read -p "Input your Database Name :" db_name_var
+#echo "successfuly login in Database: " $db_name_var
+
+#user=$db_user
+#password=$db_pass_var
+#database=$db_name_var
+
+#mysql --user="$user" --password="$password" --database="$database" --execute="show databases; use wordpress; show tables;"
+
+
+user=myusername
+password=mypassword
+database=mydatabase
+
+
+
+mysql mysql --local-infile=1 -p1  --user="$user" --password="$password" --database="$database" < /root/db_input.sql
+

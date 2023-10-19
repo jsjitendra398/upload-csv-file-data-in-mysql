@@ -1,0 +1,25 @@
+use wordpress;
+show tables;
+select * from  Address_Book;
+LOAD DATA LOCAL INFILE '/tmp/user.csv'  INTO TABLE Address_Book  FIELDS TERMINATED BY ','  ENCLOSED BY '"' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+select * from  Address_Book;
+SELECT 'user_login', 'user_pass', 'user_email', 'display_name', 'first_name','last_name' UNION ALL SELECT * from (SELECT user_login, user_pass, user_email , display_name , first_name , last_name FROM Address_Book order by display_name limit 3) a INTO OUTFILE '/tmp/db_backup.csv';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
